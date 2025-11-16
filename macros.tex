@@ -28,7 +28,6 @@
 %\DeclareMathOperator\deg{deg}
 %\DeclareMathOperator\dim{dim}
 %\DeclareMathOperator\det{det}
-\DeclareMathOperator\GL{GL}
 \DeclareMathOperator\Aut{Aut}
 \DeclareMathOperator\sgn{sgn}
 \DeclareMathOperator\adj{adj}
@@ -55,30 +54,37 @@
 \newcommand{\Env}{{\mathcal{U}}}
 \newcommand{\ideal}{{\mathcal{I}}}
 
+\newcommand{\GL}{{\mathsf{GL}}}
+\newcommand{\Orth}{{\mathsf{O}}}
+\newcommand{\SO}{{\mathsf{SO}}}
+\newcommand{\Uni}{{\mathsf{U}}}
+\newcommand{\SU}{{\mathsf{SU}}}
+\newcommand{\SL}{{\mathsf{SL}}}
+
 % For arrows pointing
 \tikzset{%
-    myarrow/.style = {-Stealth, shorten >=5pt}
+	myarrow/.style = {-Stealth, shorten >=5pt}
 }
 \newcommand{\mypoint}[2]{\tikz[remember picture]{\node[inner sep=0, anchor=base](#1){$#2$};}}
 
 % For arrows inside paths
 \tikzset{
-    set arrow inside/.code={\pgfqkeys{/tikz/arrow inside}{#1}},
-    set arrow inside={end/.initial=>, opt/.initial=},
-    /pgf/decoration/Mark/.style={
-        mark/.expanded=at position #1 with
-        {
-            \noexpand\arrow[\pgfkeysvalueof{/tikz/arrow inside/opt}]{\pgfkeysvalueof{/tikz/arrow inside/end}}
-        }
-    },
-    arrow inside/.style 2 args={
-        set arrow inside={#1},
-        postaction={
-            decorate,decoration={
-                markings,Mark/.list={#2}
-            }
-        }
-    },
+	set arrow inside/.code={\pgfqkeys{/tikz/arrow inside}{#1}},
+	set arrow inside={end/.initial=>, opt/.initial=},
+	/pgf/decoration/Mark/.style={
+		mark/.expanded=at position #1 with
+		{
+			\noexpand\arrow[\pgfkeysvalueof{/tikz/arrow inside/opt}]{\pgfkeysvalueof{/tikz/arrow inside/end}}
+		}
+	},
+	arrow inside/.style 2 args={
+		set arrow inside={#1},
+		postaction={
+			decorate,decoration={
+				markings,Mark/.list={#2}
+			}
+		}
+	},
 }
 
 \usepackage{mathtools} % for \xhookrightarrow
@@ -86,9 +92,9 @@
 % For fake coproduct symbol
 \DeclareRobustCommand{\coprod}{\mathop{\text{\fakecoprod}}}
 \newcommand{\fakecoprod}{%
-    \sbox0{$\prod$}%
-    \smash{\raisebox{\dimexpr.9625\depth-\dp0}{\scalebox{1}[-1]{$\prod$}}}%
-    \vphantom{$\prod$}%
+	\sbox0{$\prod$}%
+	\smash{\raisebox{\dimexpr.9625\depth-\dp0}{\scalebox{1}[-1]{$\prod$}}}%
+	\vphantom{$\prod$}%
 }
 
 % For vertical equivalence symbol
@@ -104,11 +110,11 @@
 
 % For tikzcd
 \tikzcdset{
-    /tikz/commutative diagrams/every diagram/.append style={
-        row sep=huge,
-        column sep=huge
-    },
-    row sep/subtext/.initial = 1pt,
+	/tikz/commutative diagrams/every diagram/.append style={
+		row sep=huge,
+		column sep=huge
+	},
+	row sep/subtext/.initial = 1pt,
 }
 
 \usepackage{musicography} % For music natural symbol

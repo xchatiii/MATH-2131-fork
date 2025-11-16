@@ -101,7 +101,7 @@ Here $\C \times_{s, t} \C$ is defined as the pullback of the diagram below:
 where the set $\C \times_{s, t} \C = \{ (x, y) \in \C \times \C \mid s(x) = t(y) \}$.
 Intuitively, the pullback is to filter out the mappings that can do composition, such as $f, g \in \C \times_{(s, t)} \C$ where \begin{tikzcd}[cramped, column sep=normal] A \arrow[r, "f"] & B \arrow[r, "g"] & C \end{tikzcd}.
 
-The $s$ and $t$ are called the \emph{source map} and \emph{target map} respectively.
+$s$ and $t$ are called the \emph{source map} and \emph{target map} respectively.
 We can picture the composition graphically as follows:
 \begin{center}
 	\begin{tikzcd}[row sep=subtext, column sep=tiny]
@@ -835,7 +835,7 @@ Finally, we have the natural identification:
 	Consider the cotangent vector $df_p$ at point $p$ for some smooth function $f : U \to \R$.
 	It is a linear functional d$f_p : \text{T}_p U \to \R$ defined by d$f_p(\vec{u}) = \nabla f(p) \cdot \vec{u}$ for all $\vec{u} \in \text{T}_p U$.
 	Here T$_p U$ is the tangent space of $U$ at point $p$, which is a vector space over $\R$.
-	Note that both $\vec{u}$ and $\nabla f(p)$ are depending on the choice of a coordinate system.
+	Note that both $\vec{u}$ and $\nabla f(p)$ depends on the choice of a coordinate system.
 	However, d$f_p$ is independent of any choice of coordinate system.
 	In normal calculus, d$f_p$ is called the \emph{first partial derivative} of $f$ at point $p$, and normally we write it as $\frac{\partial f}{\partial x}(p)$ and $\frac{\partial f}{\partial y}(p)$.
 \end{example}
@@ -1776,7 +1776,7 @@ Hence, we have the formula of determinants:
 \begin{remark}
 	For the magnitude part in the formula, $a_1^{\sigma(1)} a_2^{\sigma(2)} \cdots a_n^{\sigma(n)}$, they are in distinct rows and in distinct columns.
 	They are in distinct columns because of the subscript of $a_j^{\sigma(j)}$ is $j$ for all $1 \leq j \leq n$.
-	They are in distinct rows due to the $\sigma$, otherwise it will be zero because of the alternating property of exterior products.
+	They are in distinct rows due to $\sigma$, otherwise it will be zero because of the alternating property of exterior products.
 \end{remark}
 
 \newpage
@@ -1797,7 +1797,7 @@ For the alternating property, we have the following evaluation from the original
 \end{align*}
 Moreover, the three properties above uniquely determine the determinant function.
 \begin{remark}
-	The first two properties can be defined on the rows of $A$ as well and they still hold.
+	The first two properties can be defined on the rows of $A$ as well and they will still hold.
 	This is because the determinant of a matrix is equal to the determinant of its transpose, which is the matrix part of $\det f^* \equiv \det f$ shown in the previous section.
 \end{remark}
 

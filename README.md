@@ -11,6 +11,7 @@ Welcome to contribute this notes. All proofs may be subject to errors.
 
 This is a fork of the original repo for minor LaTeX improvements.
 
-Branch `concise`: You are smart enough; no one needs 2 paragraphs to prove identity element is unique. 
+Branch `concise`: You are smart enough; no one needs 2 paragraphs to prove identity element is unique.
+Let me fix those typos as well lol
 
 <sub>Not everyday I see an underclassman who just so happens to be in the same university, same major and same program with mine and "graced" by the same professor, and also writes LaTeX, do I?</sub>

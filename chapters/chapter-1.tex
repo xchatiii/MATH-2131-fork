@@ -11,7 +11,7 @@
 We start with the definition of a binary operation.
 
 \begin{definition}[Binary Operation]
-	A \emph{binary operation} on a set $S$ is a mapping of the elements of the Cartesian product $S \times S$ to $S$.
+	A \emph{binary operation}\index{binary operation} on a set $S$ is a mapping of the elements of the Cartesian product $S \times S$ to $S$.
 	\begin{align*}
 		\cdot : S \times S & \to S \\ (x,y) &\mapsto x \cdot y
 	\end{align*}
@@ -40,7 +40,7 @@ Hence, there is something called unary and ternary operations, corresponding to 
 \end{example}
 
 \begin{definition}[Identifiable]
-	A binary operation $\cdot: S \times S \to S$ is said to be \emph{identifiable}\index{identifiable}, or \emph{unital}\index{unital}, if there exists an element $e \in S$, the \emph{identity}\index{identity} or \emph{unit element}, such that, for all $x \in S$
+	A binary operation $\cdot: S \times S \to S$ is said to be \emph{identifiable}\index{identifiable}, or \emph{unital}\index{unital}, if there exists an element $e \in S$, the \emph{identity}\index{identity} or \emph{unit element}\index{unit element}, such that, for all $x \in S$
 	\[ e \cdot x = x = x \cdot e \]
 \end{definition}
 
@@ -148,11 +148,11 @@ With those five properties, we can construct monoid and groups.
 \begin{definition}[Monoid]
 	A \emph{monoid}\index{monoid} is a set $M$ equipped with a binary operation $f: M \times M \to M$ having the following properties:
 	\begin{enumerate}
-		\item \emph{Associative}\index{Associative}
-		\item \emph{Identifiable}\index{Identifiable}
+		\item \emph{Associative}\index{associative}
+		\item \emph{Identifiable}\index{identifiable}
 	\end{enumerate}
-	We say $(M, f)$ is a monoid, and $f$ is the \emph{monoid operation} on the set $M$.
-	A set $M$ with a monoid operation $f$ is the \emph{monoid structure}.
+	We say $(M, f)$ is a monoid, and $f$ is the \emph{monoid operation}\index{monoid operation} on the set $M$.
+	A set $M$ with a monoid operation $f$ is the \emph{monoid structure}\index{monoid structure}.
 \end{definition}
 
 \begin{definition}[Group]
@@ -168,7 +168,7 @@ With those five properties, we can construct monoid and groups.
 \end{definition}
 
 \begin{definition}[Unital Ring]
-	A \emph{unital ring} is a set $R$ equipped with two binary operations $f: R \times R \to R$ (addition) and $g: R \times R \to R$ (multiplication) such that the following properties hold:
+	A \emph{unital ring}\index{unital ring} is a set $R$ equipped with two binary operations $f: R \times R \to R$ (addition) and $g: R \times R \to R$ (multiplication) such that the following properties hold:
 	\begin{enumerate}
 		\item \emph{Additive Group:} $(R, f)$ is an abelian group.
 		\item \emph{Multiplicative Monoid:} $(R, g)$ is a monoid.
@@ -177,7 +177,7 @@ With those five properties, we can construct monoid and groups.
 \end{definition}
 
 \begin{definition}[Commutative Ring]
-	A \emph{commutative ring} is a unital ring $R$ such that the multiplication operation $g: R \times R \to R$ is commutative.
+	A \emph{commutative ring}\index{commutative ring} is a unital ring $R$ such that the multiplication operation $g: R \times R \to R$ is commutative.
 \end{definition}
 
 \begin{example}
@@ -226,7 +226,7 @@ Then if the two are in the same algebraic structures?
 They are called the homomorphisms.
 
 \begin{definition}[Monoid Homomorphism]
-	A \emph{monoid homomorphism} is a morphism between two monoids that preserves the monoid structure.
+	A \emph{monoid homomorphism}\index{monoid homomorphism} is a morphism between two monoids that preserves the monoid structure.
 	Formally, let $(M_1, \cdot_1)$ and $(M_2, \cdot_2)$ be two monoids with identity elements $e_1$ and $e_2$, respectively.
 	A function $f: M_1 \to M_2$ is a monoid homomorphism if:
 	\begin{enumerate}
@@ -236,7 +236,7 @@ They are called the homomorphisms.
 \end{definition}
 
 \begin{definition}[Group Homomorphism]
-	A \emph{group homomorphism} is a morphism between two groups that preserves the group structure.
+	A \emph{group homomorphism}\index{group homomorphism} is a morphism between two groups that preserves the group structure.
 	Formally, let $(G_1, \cdot_1)$ and $(G_2, \cdot_2)$ be two groups with identity elements $e_1$ and $e_2$, respectively.
 	A function $f: G_1 \to G_2$ is a group homomorphism if:
 	\begin{enumerate}
@@ -284,7 +284,7 @@ Thus, for group homomorphisms, the second property can be derived from the first
 To introduce the vector space, the following two morphisms are required.
 
 \begin{definition}[Ring Homomorphism]
-	A \emph{ring homomorphism} is a morphism between two rings that preserves both the additive and multiplicative structures.
+	A \emph{ring homomorphism}\index{ring homomorphism} is a morphism between two rings that preserves both the additive and multiplicative structures.
 	Formally, let $(R_1, +_1, \cdot_1)$ and $(R_2, +_2, \cdot_2)$ be two rings with identity elements $0_1$, $1_1$ and $0_2$, $1_2$, respectively.
 	A function $f: R_1 \to R_2$ is a ring homomorphism if:
 	\begin{enumerate}
@@ -306,7 +306,7 @@ To introduce the vector space, the following two morphisms are required.
 The following two sets are the sets of all structure-preserving maps.
 
 \begin{definition}[Hom-set]
-	The set of all morphisms from an algebraic structure $A$ to another algebraic structure $B$ is called the \emph{hom-set}, denoted by $\Hom(A, B)$.
+	The set of all morphisms from an algebraic structure $A$ to another algebraic structure $B$ is called the \emph{hom-set}\index{hom-set}, denoted by $\Hom(A, B)$.
 \end{definition}
 
 \begin{definition}[Endomorphism Ring]
@@ -338,16 +338,16 @@ The following two sets are the sets of all structure-preserving maps.
 Then we can define what a linear structure is.
 
 \begin{definition}[Linear Structure]
-	A \emph{linear structure} over a field $\F$ on a set $V$ is a pair $(+, \cdot)$ where $(V, +)$ is an abelian group with a ring homomorphism $\F \to \End(V)$, where $\End(V)$ is the endomorphism ring of the abelian group $(V, +)$.
+	A \emph{linear structure}\index{linear structure} over a field $\F$ on a set $V$ is a pair $(+, \cdot)$ where $(V, +)$ is an abelian group with a ring homomorphism $\F \to \End(V)$, where $\End(V)$ is the endomorphism ring of the abelian group $(V, +)$.
 	\begin{align*}
 		\cdot : \F &\to \End(V) \\
-		\alpha &\mapsto (\alpha\cdot : \vec{x} \mapsto \alpha \vec{x}) \qquad \alpha \cdot : V \to V
+		\alpha &\mapsto (\alpha\cdot : \vec x \mapsto \alpha \vec x) \qquad \alpha \cdot : V \to V
 	\end{align*}
-	The ring homomorphism is a (ring) action of the field $\F$ on the abelian group $(V, +)$, called \emph{scalar multiplication}.
+	The ring homomorphism is a (ring) action of the field $\F$ on the abelian group $(V, +)$, called \emph{scalar multiplication}\index{scalar multiplication}.
 	The ring action can be written as a binary operation:
 	\begin{align*}
 		\cdot : \F \times V &\to V \\
-		(\alpha, \vec{x}) &\mapsto \alpha \vec{x}
+		(\alpha, \vec x) &\mapsto \alpha \vec x
 	\end{align*}
 \end{definition}
 
@@ -355,17 +355,17 @@ A linear space / vector space is a set with a linear structure over a field on t
 In normal textbook, a linear space will be defined as follows:
 
 \begin{corollary}[Linear Spaces]
-	A linear space over a field $\F$ is a set $V$ equipped with two operations: vector addition $+: V \times V \to V$ and scalar multiplication $\cdot : \F \times V \to V$, satisfying the following axioms for all $\vec{u}, \vec{v}, \vec{w} \in V$ and $\alpha, \beta \in \F$:
+	A linear space over a field $\F$ is a set $V$ equipped with two operations: vector addition $+: V \times V \to V$ and scalar multiplication $\cdot : \F \times V \to V$, satisfying the following axioms for all $\vec u, \vec v, \vec w \in V$ and $\alpha, \beta \in \F$:
 	\begin{center}
 		\begin{tabularx}{\textwidth}{XX}
 			\toprule
 			\textbf{Axiom} & \textbf{Statement} \\
 			\midrule
-			1. Associativity of addition & $(\vec{u} + \vec{v}) + \vec{w} = \vec{u} + (\vec{v} + \vec{w})$ \\
-			2. Existence of additive identity & $\exists \vec{0} \in V$ such that $\forall \vec{u} \in V$, $\vec{u} + \vec{0} = \vec{u}$ \\
-			3. Existence of additive inverses & $\forall \vec{u} \in V$, $\exists -\vec{u} \in V$ such that $\vec{u} + (-\vec{u}) = \vec{0}$ \\
-			4. Commutativity of addition & $\vec{u} + \vec{v} = \vec{v} + \vec{u}$ \\
-			5. Distributivity of scalar multiplication with respect to vector addition & $\alpha (\vec{u} + \vec{v}) = \alpha \vec{u} + \alpha \vec{v}$ \\
+			1. Associativity of addition & $(\vec u + \vec v) + \vec w = \vec u + (\vec v + \vec w)$ \\
+			2. Existence of additive identity & $\exists \vec 0 \in V$ such that $\forall \vec u \in V$, $\vec u + \vec 0 = \vec u$ \\
+			3. Existence of additive inverses & $\forall \vec u \in V$, $\exists -\vec u \in V$ such that $\vec u + (-\vec u) = \vec 0$ \\
+			4. Commutativity of addition & $\vec u + \vec v = \vec v + \vec u$ \\
+			5. Distributivity of scalar multiplication with respect to vector addition & $\alpha (\vec u + \vec v) = \alpha \vec u + \alpha \vec v$ \\
 			6. Distributivity of scalar multiplication with respect to field addition & $(\alpha + \beta) \cdot = \alpha \cdot + \beta \cdot$ \\
 			7. Compatibility of scalar multiplication with field multiplication & $(\alpha \beta) \cdot = (\alpha \cdot) \circ (\beta \cdot)$ \\
 			8. Identity element of scalar multiplication & $\F \ni 1 \mapsto (1\cdot : x \mapsto x) \in \End(V)$ \\
@@ -415,7 +415,7 @@ In normal textbook, a linear space will be defined as follows:
 
 \begin{example}
 	Let $t$ be a formal variable.
-	Then $\F[[t]] \overset{\mathrm{def}}{=\joinrel=} \F[[\{ 1, t, t^2, \cdots \}]] = \sum_{n = 0}^\infty a_n t^n$ is the set of all formal power series in $t$ with coefficients in $\F$ and $\F[t] \overset{\mathrm{def}}{=\joinrel=} \F[\{ 1, t, t^2, \cdots \}] = \sum_{n = 0}^{N} a_n t^n$ is the set of all polynomials in $t$ with coefficients in $\F$.
+	Then $\F[[t]] \overset{\mathrm{def}}{=\joinrel=} \F[[\{ 1, t, t^2, \cdots \}]] = \sum_{n = 0}^\infty a_n t^n$ is the set of all formal power series in $t$ with coefficients in $\F$ and $\F[t] \overset{\mathrm{def}}{=\joinrel=} \F[\{ 1, t, t^2, \cdots \}] = \sum_{n = 0}^N a_n t^n$ is the set of all polynomials in $t$ with coefficients in $\F$.
 	Both $\F[[t]]$ and $\F[t]$ are linear spaces over $\F$.
 \end{example}
 
@@ -434,17 +434,17 @@ There are another names for $\F[X]$ and $\F[[X]]$: Polynomial ring and Formal Po
 		\;\middle|\; c_i \in \F
 		\right\}
 	\]
-	is the set of all \emph{column matrices} with $n$ entries in $\F$.
-	Elements in $\F^n$ are written as $\vec{x}$ and are called \emph{column vectors}. $\F^n$ is a linear space over $\F$ with the following operations defined entrywise:
+	is the set of all \emph{column matrices}\index{column matrices} with $n$ entries in $\F$.
+	Elements in $\F^n$ are written as $\vec x$ and are called \emph{column vectors}\index{column vectors}. $\F^n$ is a linear space over $\F$ with the following operations defined entrywise:
 	\begin{align*}
 		+ : \F^n \times \F^n &\to \F^n \\
-		(\vec{a}, \vec{b}) &\mapsto \vec{a} + \vec{b} = \begin{bmatrix}
+		(\vec a, \vec b) &\mapsto \vec a + \vec b = \begin{bmatrix}
 			a_1 + b_1 \\
 			\vdots \\
 			a_n + b_n
 		\end{bmatrix} \\
 		\cdot : \F \times \F^n &\to \F^n \\
-		(\alpha, \vec{a}) &\mapsto \alpha \vec{a} = \begin{bmatrix}
+		(\alpha, \vec a) &\mapsto \alpha \vec a = \begin{bmatrix}
 			\alpha a_1 \\
 			\vdots \\
 			\alpha a_n

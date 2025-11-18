@@ -50,6 +50,11 @@
 }
 
 \makeatletter\indexsetup{level=\@gobble, noclearpage}\makeatother % Disable \chapter in \printindex
+% Header override for index
+\fancypagestyle{index}[fancy]{
+	\fancyhead[LO]{\sffamily\normalsize Index}
+	\fancyhead[RE]{\sffamily\normalsize\bfseries Index}
+}
 
 \addbibresource{bibliography.bib} % Bibliography file
 
@@ -76,20 +81,30 @@
 	%----------------------------------------------------------------------------------------
 
 	\titlepage % Output the title page
-		% {\includegraphics[width=\paperwidth]{background.pdf}} % Code to output the background image, which should be the same dimensions as the paper to fill the page entirely; leave empty for no background image
+		{} % Code to output the background image, which should be the same dimensions as the paper to fill the page entirely; leave empty for no background image
 		{ % Title(s) and author(s)
 			\centering\sffamily % Font styling
 			\vspace{3cm}
-			{\huge\color{ocre} Honors in Linear and Abstract Algebra I\par} % Book title
+
+			{\huge\color{ocre}Honors in Linear and Abstract Algebra I} % Book title
+
 			\vspace{2cm} % Vertical whitespace
-			{Lecture Notes for\\MATH 2131\par} % Subtitle
+
+			Lecture Notes for\par
+			MATH 2131
+
 			\vspace{2cm}
-			{Department of Mathematics\\Hong Kong University of Science and Technology\par}
+
+			Department of Mathematics\par
+			Hong Kong University of Science and Technology
+
 			\vspace{5cm}
-			{\today \par}
-			\vfill
+
+			\today
+
+%			\vfill
 			% \vspace{24pt} % Vertical whitespace
-			% {\huge\bfseries \par} % Author name
+			% {\huge\bfseries Stupid--Benz} % Author name
 		}
 
 	%----------------------------------------------------------------------------------------
@@ -100,15 +115,15 @@
 
 	% ~\vfill % Push the text down to the bottom of the page
 
-	\noindent {\Large \bf \sffamily Prefaces}
+	\noindent{\Large\bfseries\sffamily Preface}
 
 	\vspace{8pt}
 
-	\noindent This lecture notes was written by a student in the course MATH 2131 -- Honors in Linear and Abstract Algebra by Professor Meng Guowu in HKUST in 2025-26 Fall.
+	\noindent This lecture notes was written by a student in the course MATH 2131 -- Honors in Linear and Abstract Algebra by Professor Meng Guowu\nocite{mgw} in HKUST in 2025--26 Fall.
 
-	\noindent All diagrams in this lecture notes are written in LaTeX TikZ code.
+	\noindent All diagrams in this lecture notes are written in \LaTeX\ TikZ code.
 
-	\noindent These notes are with reference to textbooks \textit{`Linear Algebra'} by Friedberg, Insel and Spence, \textit{`Abstract Algebra'} by Artin and \textit{`A First Course in Abstract Algebra'} by Fraleigh.
+	\noindent These notes are with reference to textbooks \citetitle{Friedberg2018-su} by \citeauthor{Friedberg2018-su}, \citetitle{artin_2018} by \citeauthor{artin_2018} and \citetitle{Fraleigh2002-ck} by \citeauthor{Fraleigh2002-ck}.
 
 	\noindent Also, this notes is with reference to the other the notes of two other professors teaching the same course before, Professor Ivan Ip and Professor Min Yan.
 
@@ -125,9 +140,13 @@
 
 	\pagestyle{fancy} % Enable default headers and footers again
 
-	\newpage
+	\cleardoublepage
 
-	\noindent {\Large \bf \sffamily List of Symbols}
+	% LIST OF SYMBOLS
+
+	\section*{List of Symbols}
+	\markboth{\sffamily\normalsize\bfseries Index}{\sffamily\normalsize\bfseries List of Symbols}
+	\addcontentsline{toc}{section}{\textcolor{ocre}{List of Symbols}}
 
 	\vspace{8pt}
 
@@ -153,23 +172,23 @@
 		$\subset$ & proper subset \\
 		$\subseteq$ & subset, i.e.~can be equal \\
 		\midrule
-		$\iota$ & Inclusion map \\
-		$\xhookrightarrow{}$ & Injective arrow \\
-		$\pi$ & Projection map \\
-		$\twoheadrightarrow$ & Surjective arrow \\
+		$\iota$ & inclusion map \\
+		$\hookrightarrow$ & injective arrow \\
+		$\pi$ & projection map \\
+		$\twoheadrightarrow$ & surjective arrow \\
 		\midrule
-		$S, T$ & Linear maps \\
-		$A, B$ & Matrices \\
+		$S, T$ & linear maps \\
+		$A, B$ & matrices \\
 		\midrule
 		$\Mor_\C(V, W)$ & the set of all morphisms from $V$ to $W$ in category $\C$ \\
-		$\Hom(V, W)$ & Hom-set of $V$ to $W$ \\
-		$\End(A)$ & Endomorphism ring of $A$ \\
+		$\Hom(V, W)$ & hom-set of $V$ to $W$ \\
+		$\End(A)$ & endomorphism ring of $A$ \\
 		$\M{m \times n}{\F}$ & the set of all $m \times n$ matrices over $\F$ \\
 		\midrule
-		$\vec{x}$ & column vector with entries $x_i$ \\
-		$\hat{x}$ & row vector with entries $x_i$ \\
-		$\vec{e_i}$ & column vector with only 1 at the $i$-th row and 0 at other places \\
-		$\hat{e_i}$ & row vector with only 1 at the $i$-th column and 0 at other places \\
+		$\vec x$ & column vector with entries $x_i$ \\
+		$\hat x$ & row vector with entries $x_i$ \\
+		$\vec e_i$ & column vector with only 1 at the $i$-th row and 0 at other places \\
+		$\hat e_i$ & row vector with only 1 at the $i$-th column and 0 at other places \\
 		\midrule
 		$\alpha \cdot$ & a map that performs scalar multiplication \\
 		$A \cdot$ & a map that performs matrix multiplication \\
@@ -178,16 +197,16 @@
 		$\delta_X$ & the set of all Kronecker delta functions \\
 		$\delta_{ij}$ & the Kronecker delta symbol \\
 		\midrule
-		$\ker(T)$ & Kernel of linear map $T$ \\
-		$\im(T)$ & Image of linear map $T$ \\
-		$\coker(T)$ & Cokernel of linear map $T$ \\
-		$\coim(T)$ & Coimage of linear map $T$ \\
-		$\Span(S)$ & Span of a set of vectors $S$ \\
+		$\ker(T)$ & kernel of linear map $T$ \\
+		$\im(T)$ & image of linear map $T$ \\
+		$\coker(T)$ & cokernel of linear map $T$ \\
+		$\coim(T)$ & coimage of linear map $T$ \\
+		$\Span(S)$ & span of a set of vectors $S$ \\
 		\midrule
-		$\prod$ & Product \\
-		$\coprod$ & Coproduct \\
-		$\oplus$ & Direct sum \\
-		$\otimes$ & Tensor product \\
+		$\prod$ & product \\
+		$\coprod$ & coproduct \\
+		$\oplus$ & direct sum \\
+		$\otimes$ & tensor product \\
 		\bottomrule
 	\end{tabularx}
 
@@ -207,6 +226,8 @@
 		$(-)^*$ & Dual space functor \\
 		\bottomrule
 	\end{tabularx}
+
+	\cleardoublepage
 
 
 	%----------------------------------------------------------------------------------------
@@ -359,7 +380,7 @@
 		%----------------------------------------------------------------------------------------
 
 		\chapter*{Bibliography}
-		\markboth{\sffamily\normalsize\bfseries Bibliography}{\sffamily\normalsize\bfseries Bibliography} % Set the page headers to display a Bibliography chapter name
+		\markboth{\sffamily\normalsize\bfseries Bibliography}{\sffamily\normalsize Bibliography} % Set the page headers to display a Bibliography chapter name
 		\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}} % Add a Bibliography heading to the table of contents
 
 		% \section*{Articles}
@@ -367,21 +388,24 @@
 
 		% \printbibliography[heading=bibempty, type=article] % Output article bibliography entries
 
-		% \section*{Books}
-		% \addcontentsline{toc}{section}{Books} % Add the Books subheading to the table of contents
-
-		% \printbibliography[heading=bibempty, type=book] % Output book bibliography entries
+		\section*{Books}
+		\addcontentsline{toc}{section}{Books} % Add the Books subheading to the table of contents
+		\printbibliography[heading=bibempty, type=book] % Output book bibliography entries
 
 		\section*{Websites}
 		\addcontentsline{toc}{section}{Websites} % Add the Websites subheading to the table of contents
 		\printbibliography[heading=bibempty, type=online] % Output online bibliography entries
 
+		\section*{Others}
+		\addcontentsline{toc}{section}{Others}
+		\printbibliography[heading=bibempty, type=misc]
+
 		%----------------------------------------------------------------------------------------
 		%	INDEX
 		%----------------------------------------------------------------------------------------
 
+		\pagestyle{index}
 		\chapter*{Index}
-		\markboth{\sffamily\normalsize\bfseries Index}{\sffamily\normalsize\bfseries Index}
 		\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
 
 		\printindex

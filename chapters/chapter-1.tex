@@ -39,18 +39,18 @@ Hence, there is something called unary and ternary operations, corresponding to 
 	For all $x,y,z \in \mathbb{N}$, we have $x + (y + z) = (x + y) + z$.
 \end{example}
 
-\begin{definition}[Identifiable]
-	A binary operation $\cdot: S \times S \to S$ is said to be \emph{identifiable}\index{identifiable}, or \emph{unital}\index{unital}, if there exists an element $e \in S$, the \emph{identity}\index{identity} or \emph{unit element}, such that, for all $x \in S$
+\begin{definition}[Unital]
+	A binary operation $\cdot: S \times S \to S$ is said to be \emph{unital}\index{unital} if there exists an element $e \in S$, the \emph{identity}\index{identity} or \emph{unit element}, such that, for all $x \in S$,
 	\[ e \cdot x = x = x \cdot e \]
 \end{definition}
 
 \begin{example}
-	A common example of an identifiable (binary) operation is multiplication on the set of natural numbers $\mathbb{N}$.
+	A common example of an unitary binary operation is multiplication on the set of natural numbers $\mathbb{N}$.
 	The identity element is $1$, and for all $x \in \mathbb{N}$, we have $x \cdot 1 = x = 1 \cdot x$.
 \end{example}
 
 \begin{proposition}
-	The identity element of an identifiable operation is unique.
+	The identity element of a unital binary operation is unique.
 \end{proposition}
 
 \begin{proof}
@@ -75,7 +75,7 @@ The following is an example of it.
 	where $e$ is the identity element of the operation.
 \end{definition}
 \begin{remark}
-	An invertible operation must be identifiable, since the identity element is required in the definition of invertibility.
+	An invertible operation must be unital, since the identity element is required in the definition of invertibility.
 \end{remark}
 
 \begin{example}
@@ -149,7 +149,7 @@ With those five properties, we can construct monoid and groups.
 	A \emph{monoid}\index{monoid} is a set $M$ equipped with a binary operation $f: M \times M \to M$ having the following properties:
 	\begin{enumerate}
 		\item \emph{Associative}\index{Associative}
-		\item \emph{Identifiable}\index{Identifiable}
+		\item \emph{Unital}\index{Unital}
 	\end{enumerate}
 	We say $(M, f)$ is a monoid, and $f$ is the \emph{monoid operation} on the set $M$.
 	A set $M$ with a monoid operation $f$ is the \emph{monoid structure}.

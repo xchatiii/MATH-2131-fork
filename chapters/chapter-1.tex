@@ -70,7 +70,7 @@ The following is an example of it.
 \end{example}
 
 \begin{definition}[Invertible]
-	A binary operation $\cdot: S \times S \to S$ is said to be \emph{invertible}\index{invertible} if, for every element $x \in S$, there exists an element $y \in S$, called the two-sided \emph{inverse}\index{inverse} of $x$, denoted as $x^{-1}$, such that
+	A unital binary operation $\cdot: S \times S \to S$ is said to be \emph{invertible}\index{invertible} if, for every element $x \in S$, there exists an element $y \in S$, called the two-sided \emph{inverse}\index{inverse} of $x$, denoted as $x^{-1}$, such that
 	\[ x \cdot y = e = y \cdot x \]
 	where $e$ is the identity element of the operation.
 \end{definition}
@@ -105,7 +105,7 @@ The following is an example of it.
 	Thus, the inverse element is unique.
 \end{proof}
 
-Same for the inverse, one-sided need not be unique.
+Same for the identity, a one-sided inverse need not be unique.
 The example is left as an exercise.
 
 \begin{definition}[Commutative]
@@ -115,14 +115,14 @@ The example is left as an exercise.
 
 \begin{example}
 	A common example of a commutative operation is addition on the set of integers $\Z$.
-	For all $x,y \in \Z$, we have: $x + y = y + x$
+	For all $x,y \in \Z$, we have: $x + y = y + x$.
 \end{example}
 
 \begin{definition}[Distributive (Harmonic)]
 	A binary operation $\cdot: S \times S \to S$ is said to be \emph{distributive}\index{distributive} with respect to another binary operation $+: S \times S \to S$ if, for all $x,y,z \in S$, the following holds:
 	 \begin{align*}
-		x \cdot (y + z) &= x \cdot y + x \cdot z \\
-		(y + z) \cdot x &= y \cdot x + z \cdot x
+		x \cdot (y + z) &= x \cdot y + x \cdot z, \\
+		(y + z) \cdot x &= y \cdot x + z \cdot x.
 	\end{align*}
 \end{definition}
 
@@ -134,8 +134,8 @@ Note that it is important to show that ``\emph{which binary operation} is distri
 	A common example of a distributive operation is multiplication over addition on the set of integers $\Z$.
 	For all $x,y,z \in \Z$, we have:
 	 \begin{align*}
-		x \cdot (y + z) &= x \cdot y + x \cdot z \\
-		(y + z) \cdot x &= y \cdot x + z \cdot x
+		x \cdot (y + z) &= x \cdot y + x \cdot z, \\
+		(y + z) \cdot x &= y \cdot x + z \cdot x.
 	\end{align*}
 \end{example}
 
@@ -393,7 +393,7 @@ In normal textbook, a linear space will be defined as follows:
 		\F[[X]] = \Map(X, \F) &\overset{\mathrm{def}}{=\joinrel=} \text{the set of all $\F$-valued functions on } X \\
 		&=\joinrel= \left\{ f : X \to \F \right\}
 	\end{align*}
-	$\F[[X]]$ is a linear space over $\F$ with the following operations defined pointwisely:
+	$\F[[X]]$ is a linear space over $\F$ with the following operations defined pointwise:
 	\begin{align*}
 		+ : \F[[X]] \times \F[[X]] &\to \F[[X]] \\
 		(f,g) &\mapsto (f+g: x \mapsto f(x) + g(x)) \qquad f + g : X \to \F \\
@@ -408,7 +408,7 @@ In normal textbook, a linear space will be defined as follows:
 		\F[X] = \text{Map}_{\text{fin}}(X, \F) &\overset{\mathrm{def}}{=\joinrel=} \text{the set of all finitely supported $\F$-valued functions on } X \\
 		&=\joinrel= \left\{ f : X \to \F \mid f \text{ is finitely supported} \right\}
 	\end{align*}
-	$\F[X]$ is a linear space over $\F$ as $\F[X] \subseteq \F[[X]]$ and the operations are defined pointwisely as in the previous example.
+	$\F[X]$ is a linear space over $\F$ as $\F[X] \subseteq \F[[X]]$ and the operations are defined pointwise as in the previous example.
 
 	$f: X \to \F$ is finitely supported if the set $\{ x \in X \mid f(x) \neq 0 \}$ is finite or $f(x) \neq 0$ for only finitely many $x \in X$.
 \end{example}

@@ -122,10 +122,10 @@ However, we have the following proposition.
 
 \begin{definition}[Linear Independences] \label{def:linear_independence}
 	Let $W$ be a linear space over a field $\mathbb{k}$ and $V_1, \cdots, V_k$ be subspaces of $W$.
-	The subspaces $V_1, \cdots, V_k$ are said to be \emph{linearly independent} if $V_i \neq \{0_W\}$ for all $i$ and there is one and only one way to split $0_W \in W$ as a sum of vectors from each $V_i$, i.e., if $v_i \in V_i$ for all $i$ and $\sum_{i=1}^{k} v_i = 0_W$, then $v_i = 0_W$ for all $i$.
+	The subspaces $V_1, \cdots, V_k$ are \emph{linearly independent} if $V_i \neq \{0_W\}$ for all $i$ and there is one and only one way to split $0_W \in W$ as a sum of vectors from each $V_i$, i.e., if $v_i \in V_i$ for all $i$ and $\sum_{i=1}^{k} v_i = 0_W$, then $v_i = 0_W$ for all $i$.
 \end{definition}
 
-Vectors $v_1, v_2, \cdots, v_k \in W$ are said to be independent if the subspaces $\Span(v_1)$, $\Span(v_2)$, $\cdots$, $\Span(v_k)$ are linearly independent.
+Vectors $v_1, v_2, \cdots, v_k \in W$ are independent if the subspaces $\Span(v_1)$, $\Span(v_2)$, $\cdots$, $\Span(v_k)$ are linearly independent.
 
 \begin{proposition}
 	$v_1, v_2, \cdots, v_k \in W$ are linearly independent if and only if there is one and only one way to write $0_W \in W$ as the combination of $v_1, \cdots, v_k$ with coefficients in $\mathbb{k}$, i.e., the equation
@@ -144,12 +144,12 @@ Is there any properties for spanning if the set spans the whole codomain?
 
 \begin{definition}[Linearly Independent Sets]
 	Let $V$ be a linear space over a field $\mathbb{k}$.
-	A subset $S \subseteq V$ is said to be a \emph{linearly independent set} of vectors in $V$ if no elements in $S$ can be expressed as a linear combination of the finitely many other elements in $S$.
+	A subset $S \subseteq V$ is a \emph{linearly independent set} of vectors in $V$ if no elements in $S$ can be expressed as a linear combination of the finitely many other elements in $S$.
 \end{definition}
 
 \begin{definition}[Spanning Sets]
 	Let $V$ be a linear space over a field $\mathbb{k}$.
-	A subset $S \subseteq V$ is said to be a \emph{spanning set} of $V$ if $\Span(S) = V$.
+	A subset $S \subseteq V$ is a \emph{spanning set} of $V$ if $\Span(S) = V$.
 \end{definition}
 
 \begin{example}
@@ -181,7 +181,7 @@ Is there any properties for spanning if the set spans the whole codomain?
 
 \begin{definition}[Minimal Spanning Sets]
 	Let $V$ be a linear space over a field $\mathbb{k}$.
-	A spanning set $S \subseteq V$ is said to be a \emph{minimal spanning set} of $V$ if no proper subset of $S$ is a spanning set of $V$, i.e., $S' \subset S \implies \Span(S') \subset \Span(S) = V$ where $\Span(S') \neq V$.
+	A spanning set $S \subseteq V$ is a \emph{minimal spanning set} of $V$ if no proper subset of $S$ is a spanning set of $V$, i.e., $S' \subset S \implies \Span(S') \subset \Span(S) = V$ where $\Span(S') \neq V$.
 \end{definition}
 
 The following is also the equivalence definition of linearly independent sets, spanning sets and minimal spanning sets.
@@ -199,15 +199,15 @@ The order set $S$ forms a linear map $\phi_S: \mathbb{k}^n \to V$ defined by:
 \]
 
 \begin{proposition}
-	The order set $S := \{\vec{v}_1, \vec{v}_2, \cdots, \vec{v}_n\} \subseteq V$ is said to be linearly independent if and only if the linear map $\phi_S: \mathbb{k}^n \to V$ defined above is injective.
+	The order set $S := \{\vec{v}_1, \vec{v}_2, \cdots, \vec{v}_n\} \subseteq V$ is linearly independent if and only if the linear map $\phi_S: \mathbb{k}^n \to V$ defined above is injective.
 \end{proposition}
 
 \begin{proposition}
-	The order set $S := \{\vec{v}_1, \vec{v}_2, \cdots, \vec{v}_n\} \subseteq V$ is said to be a spanning set of $V$ if and only if the linear map $\phi_S: \mathbb{k}^n \to V$ defined above is surjective.
+	The order set $S := \{\vec{v}_1, \vec{v}_2, \cdots, \vec{v}_n\} \subseteq V$ is a spanning set of $V$ if and only if the linear map $\phi_S: \mathbb{k}^n \to V$ defined above is surjective.
 \end{proposition}
 
 \begin{proposition} \label{prop:minimal_spanning_set}
-	The order set $S := \{\vec{v}_1, \vec{v}_2, \cdots, \vec{v}_n\} \subseteq V$ is said to be a minimal spanning set of $V$ if and only if the linear map $\phi_S: \mathbb{k}^n \to V$ defined above is bijective.
+	The order set $S := \{\vec{v}_1, \vec{v}_2, \cdots, \vec{v}_n\} \subseteq V$ is a minimal spanning set of $V$ if and only if the linear map $\phi_S: \mathbb{k}^n \to V$ defined above is bijective.
 \end{proposition}
 \begin{remark}
 	A minimal spanning set is regarded as \emph{basis}\index{basis}.
@@ -597,11 +597,11 @@ Generally, we may consider the following commutative diagrams, where left is the
 	$V_1 + V_2 = \Span(V_1 \cup V_2)$.
 \end{proposition}
 
-Recall the definition of linear independence (Definition~\ref{def:linear_independence}): $V_1$ and $V_2$ are said to be \emph{linearly independent} if $V_1$ and $V_2$ are non-trivial and $x_1 + x_2 = 0$ for $x_i \in V_i$ implies that $x_1 = x_2 = 0$.
+Recall the definition of linear independence (Definition~\ref{def:linear_independence}): $V_1$ and $V_2$ are \emph{linearly independent} if $V_1$ and $V_2$ are non-trivial and $x_1 + x_2 = 0$ for $x_i \in V_i$ implies that $x_1 = x_2 = 0$.
 
 We have the following definition for weakly linear independence.
 \begin{definition}[Weak Linear Independence]
-	Let $V_1$ and $V_2$ be two subspaces of a linear space $W$ over a field $\mathbb{k}$. $V_1$ and $V_2$ are said to be \emph{weakly linearly independent} if $x_1 + x_2 = 0$ for $x_1 \in V_1$ and $x_2 \in V_2$ implies that $x_1 = x_2 = 0$.
+	Let $V_1$ and $V_2$ be two subspaces of a linear space $W$ over a field $\mathbb{k}$. $V_1$ and $V_2$ are \emph{weakly linearly independent} if $x_1 + x_2 = 0$ for $x_1 \in V_1$ and $x_2 \in V_2$ implies that $x_1 = x_2 = 0$.
 	Note that $V_1$ or $V_2$ can be trivial.
 \end{definition}
 
@@ -685,11 +685,11 @@ It is equivalent to saying that $W$ is finitely spanned, i.e., having a finite s
 			\cdots \arrow[r, "f_{i-2}"] & V_{i-1} \arrow[r, "f_{i-1}"] & V_i \arrow[r, "f_i"] & V_{i+1} \arrow[r, "f_{i+1}"] & \cdots
 		\end{tikzcd}
 	\end{center}
-	is said to be \emph{exact}\index{exact} at $V_i$ if
+	is \emph{exact}\index{exact} at $V_i$ if
 	\[ \im{f_{i-1}} = \ker(f_i) \]
 	i.e., the image of the map before $V_i$ is equal to the kernel of the map after $V_i$.
 
-	The sequence is said to be an \emph{exact sequence} if it is exact at every $V_i$.
+	The sequence is an \emph{exact sequence} if it is exact at every $V_i$.
 \end{definition}
 
 \begin{example}

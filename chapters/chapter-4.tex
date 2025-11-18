@@ -711,7 +711,7 @@ Consider the following two diagrams:
 \end{center}
 The left diagram shows that the free functor sends the product of two sets to the tensor product of two vector spaces.
 The right diagram shows that the free functor sends the coproduct of two sets to the direct sum of two vector spaces, i.e., the coproduct of two vector spaces.
-Note that the tensor product of two vector spaces is \emph{not}\index{not} the product of two vector spaces, as the dimension of the tensor product is $\dim(V_1 \otimes V_2) = \dim(V_1) \cdot \dim(V_2)$ while the dimension of the product is $\dim(V_1 \oplus V_2) = \dim(V_1) + \dim(V_2)$.
+Note that the tensor product of two vector spaces is \emph{not}\index{not} the product of two vector spaces, as the dimension of the tensor product is $\dim V_1 \otimes V_2 = \dim V_1 \cdot \dim V_2$ while the dimension of the product is $\dim V_1 \oplus V_2 = \dim V_1 + \dim V_2$.
 There is a unique but not isomorphic linear map $\phi : V_1 \otimes V_2 \to V_1 \oplus V_2$.
 \begin{remark}
 	The left adjoint functor preserves coproducts, and the right adjoint functor preserves products.
@@ -739,14 +739,14 @@ The \emph{dual space} of $V$ is the vector space $V^* = \Hom_\mathbb{k}(V, \math
 
 \begin{proposition}
 	Let $V$ be a finite dimensional linear space over $\mathbb{k}$.
-	Then $\dim(V^*) = \dim(V)$.
+	Then $\dim V^* = \dim V$.
 	So, $V^*$ is isomorphic to $V$ but not naturally isomorphic to $V$.
 \end{proposition}
 \begin{proof}
 	Without the loss of generality, we may assume $\dim{V} = n$ and $V = \mathbb{k}^n$.
 	Then $V^* = \Hom_\mathbb{k}(\mathbb{k}^n, \mathbb{k}) \equiv \M{1 \times n}{\mathbb{k}}$, the linear space of row matrices with $n$ entries.
 	The linear space is the span of $n$ standard basis row matrices: $\hat{e}^1, \hat{e}^2, \cdots, \hat{e}^n$.
-	So $\dim(V^*) = n = \dim(V)$.
+	So $\dim V^* = n = \dim V$.
 	We can say $V^* \cong V$.
 \end{proof}
 
@@ -1121,7 +1121,7 @@ We have a natural equivalence:
 Then we can prove that $\Hom(V_1, V_2) \equiv V_1^* \otimes V_2$ and $(V_1 \otimes V_2)^* \equiv V_1^* \otimes V_2^*$.
 Also, we have the following equation, by considering $V_1 \otimes V_2 \equiv \Hom(V_1^*, V_2)$:
 \[
-	\dim(V \otimes W) = \dim(V) \cdot \dim(W)
+	\dim V \otimes W = \dim V \cdot \dim W
 \]
 If $e$ is a minimal spanning set of $V_1$ and $f$ is a minimal spanning set of $V_2$, then $e \otimes f$ is a minimal spanning set of $V_1 \otimes V_2$.
 Moreover, we have $\End(V) \equiv (\End(V))^*$ and the identity map $1_V$ corresponds to the \emph{trace}\index{trace} map $\tr : \End(V) \to \mathbb{k}$ under this identification.
@@ -1196,7 +1196,7 @@ We define a new notation:
 \]
 for all $k \geq 0$.
 Note that $V^{\otimes 0} = \mathbb{k}$.
-Also, $\dim(V^{\otimes k}) = (\dim{V})^k$ for all $k \geq 0$.
+Also, $\dim V^{\otimes k} = (\dim{V})^k$ for all $k \geq 0$.
 
 We define the \emph{tensor algebra} of $V$ over $\mathbb{k}$, denoted by $\T V$, as follows:
 \[
@@ -1401,34 +1401,34 @@ It is actually the \emph{ideal completion} of the relation $xy - yx = [x, y]$ fo
 Let $V_\smallbullet = \bigoplus_{i \geq 0} V_i$ be a $\Z_{\geq 0}$-graded finite dimensional linear space over a field $\mathbb{k}$.
 The \emph{Hilbert-Poincaré series} of $V_\smallbullet$ is defined as the following formal power series:
 \[
-	P_{V_\smallbullet}(t) = \sum_{i = 0}^\infty \dim(V_i)\ t^i
+	P_{V_\smallbullet}(t) = \sum_{i = 0}^\infty \dim V_i\ t^i
 \]
 
 \begin{example}
 	The Hilbert-Poincaré series of the tensor algebra $\T V$ is:
 	\[
-		P_{\T V}(t) = \sum_{i = 0}^\infty \dim(V^{\otimes i})\ t^i = \sum_{i = 0}^\infty (\dim{V})^i\ t^i = \frac{1}{1 - \dim{V}\ t}
+		P_{\T V}(t) = \sum_{i = 0}^\infty \dim V^{\otimes i}\ t^i = \sum_{i = 0}^\infty (\dim{V})^i\ t^i = \frac{1}{1 - \dim{V}\ t}
 	\]
 \end{example}
 
 \begin{example}
 	The Hilbert-Poincaré series of the symmetric algebra $\Sym V$ is:
 	\[
-		P_{\Sym V}(t) = \sum_{i = 0}^\infty \dim(\mathcal{S}^i V)\ t^i = \frac{1}{(1 - t)^{\dim{V}}}
+		P_{\Sym V}(t) = \sum_{i = 0}^\infty \dim \mathcal{S}^i V\ t^i = \frac{1}{(1 - t)^{\dim{V}}}
 	\]
 \end{example}
 
 \begin{example}
 	The Hilbert-Poincaré series of the exterior algebra $\Ext V$ is:
 	\[
-		P_{\Ext V}(t) = \sum_{i = 0}^\infty \dim({\bigwedge}^i V)\ t^i = (1 + t)^{\dim{V}}
+		P_{\Ext V}(t) = \sum_{i = 0}^\infty \dim {\bigwedge}^i V\ t^i = (1 + t)^{\dim{V}}
 	\]
 \end{example}
 
 As the Hilbert-Poincaré series of the exterior algebra $\Ext V$ is a polynomial of degree $\dim{V}$, we have ${\bigwedge}^k V = 0$ for all $k > \dim{V}$.
 Especially, if $\dim{V} = n$, then ${\bigwedge}^n V$ is 1-dimensional and ${\bigwedge}^{n + 1} V = 0$.
 This is because any $(n + 1)$ vectors in an $n$-dimensional vector space are linearly dependent, so the exterior product of them is $0$.
-Moreover, $\dim({\bigwedge}^k V) = \dim({\bigwedge}^{n - k} V)$ for all $0 \leq k \leq n$.
+Moreover, $\dim {\bigwedge}^k V = \dim {\bigwedge}^{n - k} V$ for all $0 \leq k \leq n$.
 
 Any one-dimensional linear space is called a \emph{line}\index{line}.
 \chapter{Determinants}

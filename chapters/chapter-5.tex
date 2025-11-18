@@ -14,8 +14,8 @@ Consider the following diagram:
 \begin{center}
 	\begin{tikzcd}
 		V \arrow[r, "T"] \arrow[d, "{[-]_\B}"'] & V \arrow[d, "{[-]_\B}"] \\
-		\F^n \arrow[d] \arrow[r, "A"] & \F^n \arrow[d] \\
-		\F^n \arrow[r, "\bar{A}"] & \F^n
+		\mathbb{k}^n \arrow[d] \arrow[r, "A"] & \mathbb{k}^n \arrow[d] \\
+		\mathbb{k}^n \arrow[r, "\bar{A}"] & \mathbb{k}^n
 	\end{tikzcd}
 \end{center}
 As both the domain and codomain are the same vector space, both basis $\B$ are the same.
@@ -40,8 +40,8 @@ If $T$ is not completely reducible, then we have to consider more complicated fo
 Then we have the diagram:
 \begin{center}
 	\begin{tikzcd}[ampersand replacement=\&]
-		\F^n \arrow[r, "A"] \arrow[d, "P^{-1}"', "\cong"] \& \F^n \arrow[d, "P^{-1}", "\cong"'] \\
-		\F^n \arrow[r, "D", "{\begin{bmatrix} \lambda_1 & & \\ & \ddots & \\ & & \lambda_n \end{bmatrix}}"'] \& \F^n
+		\mathbb{k}^n \arrow[r, "A"] \arrow[d, "P^{-1}"', "\cong"] \& \mathbb{k}^n \arrow[d, "P^{-1}", "\cong"'] \\
+		\mathbb{k}^n \arrow[r, "D", "{\begin{bmatrix} \lambda_1 & & \\ & \ddots & \\ & & \lambda_n \end{bmatrix}}"'] \& \mathbb{k}^n
 	\end{tikzcd}
 \end{center}
 Here $P$ is the change of basis matrix from the basis that gives $A$ to the basis that gives $D$.
@@ -62,7 +62,7 @@ Assume that $D = \begin{bmatrix}
 	\lambda_1 I_{n_1} & & \\
 	& \ddots & \\
 	& & \lambda_k I_{n_k}
-\end{bmatrix}$, where $\lambda_i \in \F$ are distinct eigenvalues and $I_{n_i}$ are identity matrices of order $n_i$, $n_i > 0$ and $\sum_{i = 1}^k n_i = n$.
+\end{bmatrix}$, where $\lambda_i \in \mathbb{k}$ are distinct eigenvalues and $I_{n_i}$ are identity matrices of order $n_i$, $n_i > 0$ and $\sum_{i = 1}^k n_i = n$.
 For example, we have:
 \[
 	D = \begin{bmatrix}
@@ -78,9 +78,9 @@ Then we have the decomposition of $V$:
 	V = V_{\lambda_1} \oplus V_{\lambda_2} \oplus \cdots \oplus V_{\lambda_k}
 \]
 where $V_i = \ker(T - \lambda_i 1_V)$ are the \emph{eigenspaces}\index{eigenspaces} of $T$ corresponding to eigenvalues $\lambda_i$.
-Moreover, we have the decomposition of $\F^n$:
+Moreover, we have the decomposition of $\mathbb{k}^n$:
 \[
-	\F^n = \Span(e_1, \cdots, e_{n_1)} \oplus \Span(e_{n_1 + 1), \cdots, e_{n_1 + n_2}} \oplus \cdots \oplus \Span(e_{n_1 + \cdots + n_{k-1) + 1}, \cdots, e_{n_1 + \cdots + n_k}}
+	\mathbb{k}^n = \Span(e_1, \cdots, e_{n_1)} \oplus \Span(e_{n_1 + 1), \cdots, e_{n_1 + n_2}} \oplus \cdots \oplus \Span(e_{n_1 + \cdots + n_{k-1) + 1}, \cdots, e_{n_1 + \cdots + n_k}}
 \]
 Note that $\dim V_{\lambda_i} = n_i$ and $\sum_{i = 1}^k n_i = n$.
 
@@ -88,11 +88,11 @@ Then we have the following commutative diagram:
 \begin{center}
 	\begin{tikzcd}[ampersand replacement=\&, column sep=7.2em]
 		V \arrow[d] \arrow[r, "T = \lambda_1 1_{V_{\lambda_1}} \oplus \cdots \oplus \lambda_k 1_{V_{\lambda_k}}"', "{\begin{bmatrix} \lambda_1 1_{V_{\lambda_1}} & & \\ & \ddots & \\ & & \lambda_k 1_{V_{\lambda_k}} \end{bmatrix}}"] \& V \arrow[d] \\
-		\F^n \arrow[r, "D", "{\begin{bmatrix} \lambda_1 I_{n_1} & & \\ & \ddots & \\ & & \lambda_k I_{n_k} \end{bmatrix}}"'] \& \F^n
+		\mathbb{k}^n \arrow[r, "D", "{\begin{bmatrix} \lambda_1 I_{n_1} & & \\ & \ddots & \\ & & \lambda_k I_{n_k} \end{bmatrix}}"'] \& \mathbb{k}^n
 	\end{tikzcd}
 \end{center}
 
-In other words, if $T$ is completely reducible, then there are distinct numbers $\lambda_1, \cdots, \lambda_k \in \F$ and a non-trivial decomposition $V = V_{\lambda_1} \oplus \cdots \oplus V_{\lambda_k}$ such that $T|_{V_{\lambda_i}} = \lambda_i 1_{V_{\lambda_i}}$ for each $1 \leq i \leq k$, and $T = \lambda_1 1_{V_{\lambda_1}} \oplus \cdots \oplus \lambda_k 1_{V_{\lambda_k}}$.
+In other words, if $T$ is completely reducible, then there are distinct numbers $\lambda_1, \cdots, \lambda_k \in \mathbb{k}$ and a non-trivial decomposition $V = V_{\lambda_1} \oplus \cdots \oplus V_{\lambda_k}$ such that $T|_{V_{\lambda_i}} = \lambda_i 1_{V_{\lambda_i}}$ for each $1 \leq i \leq k$, and $T = \lambda_1 1_{V_{\lambda_1}} \oplus \cdots \oplus \lambda_k 1_{V_{\lambda_k}}$.
 Each non-zero vector $v_i$ in $V_{\lambda_i}$ is an \emph{eigenvector}\index{eigenvector} of $T$ corresponding to eigenvalue $\lambda_i$.
 This answered the first question.
 
@@ -335,23 +335,23 @@ These two terms are borrowed from representation theory of lie algebras.
 \end{definition}
 
 \begin{definition}[Semisimple]
-	We say $T$ is semisimple if $T \otimes_\F \bar{\F} : V \otimes_\F \bar{\F} \to V \otimes_\F \bar{\F}$ is completely reducible, where $\bar{\F}$ is the algebraic closure of $\F$ and $V \otimes_\F \bar{\F}$ is linear space over $\bar{\F}$.
+	We say $T$ is semisimple if $T \otimes_\mathbb{k} \bar{\mathbb{k}} : V \otimes_\mathbb{k} \bar{\mathbb{k}} \to V \otimes_\mathbb{k} \bar{\mathbb{k}}$ is completely reducible, where $\bar{\mathbb{k}}$ is the algebraic closure of $\mathbb{k}$ and $V \otimes_\mathbb{k} \bar{\mathbb{k}}$ is linear space over $\bar{\mathbb{k}}$.
 \end{definition}
 \begin{remark}
-	We can take $\F = \R$, then $\bar{\F} = \mathbb{C}$.
-	Algebraic closure means that every polynomial in $\bar{\F}[x]$ has a root in $\bar{\F}$.
+	We can take $\mathbb{k} = \R$, then $\bar{\mathbb{k}} = \mathbb{C}$.
+	Algebraic closure means that every polynomial in $\bar{\mathbb{k}}[x]$ has a root in $\bar{\mathbb{k}}$.
 	For example, $x^2 + 1$ has no root in $\R$, but it has roots $\pm i$ in $\mathbb{C}$.
 
-	Note that $- \otimes \F \equiv \id_\F$, so if we change it to $- \otimes_\F \bar{\F}$, then we are just changing the field from $\F$ to $\bar{\F}$ without changing the values inside.
+	Note that $- \otimes \mathbb{k} \equiv \id_\mathbb{k}$, so if we change it to $- \otimes_\mathbb{k} \bar{\mathbb{k}}$, then we are just changing the field from $\mathbb{k}$ to $\bar{\mathbb{k}}$ without changing the values inside.
 	For example, $1$ can be viewed as an element in $\R$ or $\mathbb{C}$.
 \end{remark}
 
 In general, $T$ is not semisimple, but it can be decomposed into a semisimple part and a \emph{nilpotent}\index{nilpotent} part.
 Moreover, this decomposition is unique.
 
-We can consider the $\End(V) \equiv \M{n \times n}{\F} \equiv \F^{n^2}$ as a vector space.
-Then $T \in \F^{n^2}$ is a vector.
-Then such the set of containing such $T$ forms a dense open subset of $\End(V) = \F^{n^2}$.
+We can consider the $\End(V) \equiv \M{n \times n}{\mathbb{k}} \equiv \mathbb{k}^{n^2}$ as a vector space.
+Then $T \in \mathbb{k}^{n^2}$ is a vector.
+Then such the set of containing such $T$ forms a dense open subset of $\End(V) = \mathbb{k}^{n^2}$.
 The dense open subset is in the Zariski topology.
 More precisely, the set of all completely reducible endomorphisms with distinct eigenvalues forms a dense open subset of $\End(V)$.
 We will study Zariski topology next section.
@@ -360,7 +360,7 @@ Once we know that completely reducible endomorphisms are dense in $\End(V)$, the
 One of the example is the Cayley-Hamilton theorem.
 
 \begin{theorem}[Cayley-Hamilton Theorem]
-	Let $T : V \to V$ be an endomorphism of a finite dimensional vector space $V$ over $\F$.
+	Let $T : V \to V$ be an endomorphism of a finite dimensional vector space $V$ over $\mathbb{k}$.
 	Then $T$ satisfies its own characteristic polynomial, i.e.~$\left.p_T (\lambda)\right|_{\lambda = T} = 0$.
 \end{theorem}
 \begin{remark}
@@ -400,7 +400,7 @@ where $n_i$ is the algebraic multiplicity of eigenvalue $\lambda_i$ and $\dim V_
 In general, we have $n_i \geq \dim V_{\lambda_i}$.
 Then $\{ \lambda_1, \cdots, \lambda_k \}$ is the set of roots of $p_T (\lambda)$ and $V_{\lambda_i} = \ker(\lambda_i 1_V - T)$.
 
-Then for any $T$, if the set of roots of $p_T (\lambda)$ in $\F$ is $\{ \lambda_1, \cdots, \lambda_k \}$, then we can define the \emph{generalised eigenspaces}:
+Then for any $T$, if the set of roots of $p_T (\lambda)$ in $\mathbb{k}$ is $\{ \lambda_1, \cdots, \lambda_k \}$, then we can define the \emph{generalised eigenspaces}:
 \[
 	V_{\lambda_i} = \ker(\lambda_i 1_V - T) \quad \forall 1 \leq i \leq k
 \]
@@ -416,9 +416,9 @@ So this characterises completely reducible endomorphisms.
 Before studying Zariski topology, we first introduce \emph{affine spaces}.
 
 \begin{definition}[Affine Spaces]
-	A set $\A$ is called an \emph{affine space} over a field $\F$ if it is a principal $(\F^n, +)$-set, i.e.~there is a free and transitive action of the additive group $(\F^n, +)$ on $\A$:
+	A set $\A$ is called an \emph{affine space} over a field $\mathbb{k}$ if it is a principal $(\mathbb{k}^n, +)$-set, i.e.~there is a free and transitive action of the additive group $(\mathbb{k}^n, +)$ on $\A$:
 	\[
-		+ : \A \times \F^n \to \A, \quad (P, \vec{v}) \mapsto P + \vec{v}
+		+ : \A \times \mathbb{k}^n \to \A, \quad (P, \vec{v}) \mapsto P + \vec{v}
 	\]
 	Each element $P \in \A$ is called a \emph{point}\index{point} in $\A$.
 \end{definition}
@@ -462,19 +462,19 @@ Then we have the following equivalent definition of topology.
 
 Then Zariski topology is defined as follows.
 \begin{definition}[Zariski Topology]
-	Let $\A$ be an affine space over a field $\F$.
-	The \emph{Zariski topology} on $\A$ is defined by taking the closed sets to be the zero loci of sets of polynomials in $\F[x_1, \cdots, x_n]$.
-	More precisely, for any set of polynomials $S \subseteq \F[x_1, \cdots, x_n]$, the corresponding closed set is:
+	Let $\A$ be an affine space over a field $\mathbb{k}$.
+	The \emph{Zariski topology} on $\A$ is defined by taking the closed sets to be the zero loci of sets of polynomials in $\mathbb{k}[x_1, \cdots, x_n]$.
+	More precisely, for any set of polynomials $S \subseteq \mathbb{k}[x_1, \cdots, x_n]$, the corresponding closed set is:
 	\[
 		V(S) = \{ P \in \A : f(P) = 0 \quad \forall f \in S \} = \bigcap_\alpha \{ f_\alpha = 0 \}
 	\]
 	The pair $(\A, \tau_{Zar})$ is called a \emph{Zariski topological space}, where $\tau_{Zar}$ is the Zariski topology on $\A$.
 \end{definition}
 
-Then the $A \in \F^{n^2} \equiv \A_\F^{n^2}$ can be viewed as a point in the affine space $\A_\F^{n^2}$ over $\F$.
-Then the set of all completely reducible endomorphisms with distinct eigenvalues forms a dense open subset of $\End(V) = \F^{n^2}$ in the Zariski topology.
+Then the $A \in \mathbb{k}^{n^2} \equiv \A_\mathbb{k}^{n^2}$ can be viewed as a point in the affine space $\A_\mathbb{k}^{n^2}$ over $\mathbb{k}$.
+Then the set of all completely reducible endomorphisms with distinct eigenvalues forms a dense open subset of $\End(V) = \mathbb{k}^{n^2}$ in the Zariski topology.
 Dense means that its closure is the whole space.
-Open means that its complement is a closed set, i.e.~the zero locus of some set of polynomials in $\F[x_1, \cdots, x_{n^2}]$.
+Open means that its complement is a closed set, i.e.~the zero locus of some set of polynomials in $\mathbb{k}[x_1, \cdots, x_{n^2}]$.
 
 \newpage
 
@@ -513,8 +513,8 @@ Before studying the canonical forms of not completely reducible endomorphisms, w
 \end{definition}
 
 \begin{example}
-	Consider $\F$ over itself.
-	Then the only ideals are $\{ 0 \}$ and $\F$ itself.
+	Consider $\mathbb{k}$ over itself.
+	Then the only ideals are $\{ 0 \}$ and $\mathbb{k}$ itself.
 	So the ideal of a field is trivial.
 \end{example}
 
@@ -534,7 +534,7 @@ Before studying the canonical forms of not completely reducible endomorphisms, w
 \end{example}
 
 \begin{example}
-	$\F[x]$ is a principal ideal domain, as every ideal of $\F[x]$ is of the form $(f(x)) = f(x) \F[x]$ for some $f(x) \in \F[x]$.
+	$\mathbb{k}[x]$ is a principal ideal domain, as every ideal of $\mathbb{k}[x]$ is of the form $(f(x)) = f(x) \mathbb{k}[x]$ for some $f(x) \in \mathbb{k}[x]$.
 	It can be proved using the division algorithm of polynomials.
 \end{example}
 
@@ -587,7 +587,7 @@ For any ring $R$, we can decomposite as follows:
 where $R^\times$ is the set of units in $R$ and $S$ is the set of non-units and non-zero elements in $R$.
 Then any $u \in R$ is called a unit if there exists some $v \in R$ such that $uv = vu = 1_R$.
 For example, in $\Z$, the units are $\pm 1$.
-In $\F[x]$, the units are all non-zero constant polynomials.
+In $\mathbb{k}[x]$, the units are all non-zero constant polynomials.
 
 Then the set of all prime elements and the set of all irreducible elements in $R$ are subsets of $S$.
 In general, they are not the same.
@@ -599,34 +599,34 @@ Irreducible elements are elements that cannot be factored into the product of tw
 
 \section{Jordan Canonical Form}
 
-Let $V$ be a finite dimensional linear space over an algebraically closed field $\F$, e.g. $\mathbb{C}$.
-Then $\F[x]$ is a principal ideal domain and $x - \lambda_i$ are the prime or irreducible elements in $\F[x]$ for each $\lambda_i \in \F$.
+Let $V$ be a finite dimensional linear space over an algebraically closed field $\mathbb{k}$, e.g. $\mathbb{C}$.
+Then $\mathbb{k}[x]$ is a principal ideal domain and $x - \lambda_i$ are the prime or irreducible elements in $\mathbb{k}[x]$ for each $\lambda_i \in \mathbb{k}$.
 \begin{remark}
-	If we take non-zero $\alpha \in \F$, then $\alpha (x - \lambda_i)$ is also an irreducible element in $\F[x]$, as $\alpha$ is a unit in $\F[x]$ and we have $(x - \lambda_i) = (\alpha(x - \lambda_i))$.
+	If we take non-zero $\alpha \in \mathbb{k}$, then $\alpha (x - \lambda_i)$ is also an irreducible element in $\mathbb{k}[x]$, as $\alpha$ is a unit in $\mathbb{k}[x]$ and we have $(x - \lambda_i) = (\alpha(x - \lambda_i))$.
 	Therefore, the irreducible elements are only unique up to multiplication by units.
 	We can just choose monic polynomials as the irreducible elements.
 \end{remark}
 
 Then for any endomorphism $T : V \to V$.
-It is equivalent to consider $V$ as a module over $\F[x]$ with the ring action defined as:
+It is equivalent to consider $V$ as a module over $\mathbb{k}[x]$ with the ring action defined as:
 \[
 	F[x] \times V \to V, \quad (p(x), v) \mapsto p(T) v
 \]
 
 \begin{example}
-	Let $p(x) = 2x^2 + 3x - 1 \in \F[x]$ and $T \in \End(V)$.
+	Let $p(x) = 2x^2 + 3x - 1 \in \mathbb{k}[x]$ and $T \in \End(V)$.
 	Then for any $v \in V$, we have $p(T) v = 2 T^2 v + 3 T v - v$.
 \end{example}
 
-$V$ is the finite dimensional linear space over $\F$, so it is a finitely generated module over $\F[x]$ with rank $0$.
+$V$ is the finite dimensional linear space over $\mathbb{k}$, so it is a finitely generated module over $\mathbb{k}[x]$ with rank $0$.
 It is the torsion part only.
 Therefore, by the classification theorem of finitely generated modules over a PID, we have:
 \[
-	V \cong \bigoplus_{i = 1}^m \frac{\F[x]}{(x - \lambda_i)^{e_i}} = \frac{\F[x]}{(x - \lambda_1)^{e_1}} \oplus \cdots \oplus \frac{\F[x]}{(x - \lambda_m)^{e_m}}
+	V \cong \bigoplus_{i = 1}^m \frac{\mathbb{k}[x]}{(x - \lambda_i)^{e_i}} = \frac{\mathbb{k}[x]}{(x - \lambda_1)^{e_1}} \oplus \cdots \oplus \frac{\mathbb{k}[x]}{(x - \lambda_m)^{e_m}}
 \]
 Note that $T$ is the same as the multiplication by $x$ in the module, i.e., $x\cdot : V \to V$ defined as $v \mapsto x v$.
-Then for each cyclic module $\dfrac{\F[x]}{(x - \lambda_i)^{e_i}}$, we have the dimension being $e_i$.
-Therefore, we have the basis on $\dfrac{\F[x]}{(x - \lambda_i)^{e_i}}$ as:
+Then for each cyclic module $\dfrac{\mathbb{k}[x]}{(x - \lambda_i)^{e_i}}$, we have the dimension being $e_i$.
+Therefore, we have the basis on $\dfrac{\mathbb{k}[x]}{(x - \lambda_i)^{e_i}}$ as:
 \[
 	\B_i = \{ 1, (x - \lambda_i), (x - \lambda_i)^2, \cdots, (x - \lambda_i)^{e_i - 1} \}
 \]
@@ -634,8 +634,8 @@ Therefore, we have the basis on $\dfrac{\F[x]}{(x - \lambda_i)^{e_i}}$ as:
 Then we consider the following diagram:
 \begin{center}
 	\begin{tikzcd}
-		\frac{\F[x]}{(x - \lambda_i)^{e_i}} \arrow[r, "x \cdot", "T_i"'] \arrow[d, "{[-]_{\B_i}}" swap] & \frac{\F[x]}{(x - \lambda_i)^{e_i}} \arrow[d, "{[-]_{\B_i}}"] \\
-		\F^{e_i} \arrow[r, "J_{e_i} (\lambda_i)" swap] & \F^{e_i}
+		\frac{\mathbb{k}[x]}{(x - \lambda_i)^{e_i}} \arrow[r, "x \cdot", "T_i"'] \arrow[d, "{[-]_{\B_i}}" swap] & \frac{\mathbb{k}[x]}{(x - \lambda_i)^{e_i}} \arrow[d, "{[-]_{\B_i}}"] \\
+		\mathbb{k}^{e_i} \arrow[r, "J_{e_i} (\lambda_i)" swap] & \mathbb{k}^{e_i}
 	\end{tikzcd}
 \end{center}
 Then what is $J_{e_i} (\lambda_i)$? We have:
@@ -648,7 +648,7 @@ Similarly, we have:
 	x \cdot (x - \lambda_i) &= 1 \cdot (x - \lambda_i)^2 + \lambda_i \cdot (x - \lambda_i) \\
 	x \cdot (x - \lambda_i)^{e_i - 1} &= 1 \cdot (x - \lambda_i)^{e_i} + \lambda_i \cdot (x - \lambda_i)^{e_i - 1} = \lambda_i \cdot (x - \lambda_i)^{e_i - 1}
 \end{align*}
-So the matrix representation of $x \cdot$ on $\dfrac{\F[x]}{(x - \lambda_i)^{e_i}}$ with respect to the basis $\B_i$ is:
+So the matrix representation of $x \cdot$ on $\dfrac{\mathbb{k}[x]}{(x - \lambda_i)^{e_i}}$ with respect to the basis $\B_i$ is:
 \[
 	J_{e_i} (\lambda_i) = \begin{bmatrix}
 		\lambda_i & & & & \\

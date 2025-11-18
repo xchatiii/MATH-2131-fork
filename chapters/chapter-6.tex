@@ -10,13 +10,13 @@ Before studying Euclidean spaces, we first review tensors and then introduce inn
 
 \section{Tensor}
 
-Let $V$ be a finite dimensional vector space over a field $\F$.
+Let $V$ be a finite dimensional vector space over a field $\mathbb{k}$.
 Then we have the following definitions.
 
 \begin{definition}[$k$-form]
 	A $k$-\emph{form} on $V$ is a multilinear map:
 	\[
-		\underbrace{V \times V \times \cdots \times V}_{k \text{ times}} \to \F
+		\underbrace{V \times V \times \cdots \times V}_{k \text{ times}} \to \mathbb{k}
 	\]
 	which is linear in each argument.
 	It is an element in $(V^*)^{\otimes k}$.
@@ -28,8 +28,8 @@ For 2-form, it is a bilinear map on $V$, i.e.~an element in $V^* \otimes V^*$.
 To prove that the set of all 2-forms on $V$ is isomorphic to $V^* \otimes V^*$, we can consider the following diagram:
 \begin{center}
 	\begin{tikzcd}
-		\Map^{\mathsf{ML}} (V \times V, \F) \arrow[r, "\equiv" description, phantom] \arrow[d, dashed] & \Hom(V, V^*) \arrow[d, "\vequiv" description, phantom] \\
-		V^* \otimes V^* & \Hom(V, \F) \otimes V^* \arrow[l, "\equiv" description, phantom]
+		\Map^{\mathsf{ML}} (V \times V, \mathbb{k}) \arrow[r, "\equiv" description, phantom] \arrow[d, dashed] & \Hom(V, V^*) \arrow[d, "\vequiv" description, phantom] \\
+		V^* \otimes V^* & \Hom(V, \mathbb{k}) \otimes V^* \arrow[l, "\equiv" description, phantom]
 	\end{tikzcd}
 \end{center}
 Remember that $\Hom(V_1, V_2 \otimes V_3) \equiv \Hom(V_1, V_2) \otimes V_3$.
@@ -37,7 +37,7 @@ Remember that $\Hom(V_1, V_2 \otimes V_3) \equiv \Hom(V_1, V_2) \otimes V_3$.
 Moreover, we have the following two special types of 2-forms which are the elements inside the symmetric and exterior powers of $V^*$.
 
 \begin{definition}[Symmetric and Skew-symmetric 2-forms]
-	A 2-form $\omega : V \times V \to \F$ is called \emph{symmetric}\index{symmetric} if
+	A 2-form $\omega : V \times V \to \mathbb{k}$ is called \emph{symmetric}\index{symmetric} if
 	\[
 		\omega (u, v) = \omega (v, u)
 	\]
@@ -54,7 +54,7 @@ Moreover, we have the following two special types of 2-forms which are the eleme
 Then we define the tensor spaces.
 
 \begin{definition}[Tensor Spaces]
-	Let $V$ be a finite dimensional vector space over a field $\F$.
+	Let $V$ be a finite dimensional vector space over a field $\mathbb{k}$.
 	The \emph{tensor space of type} $(r, s)$ on $V$ is defined as:
 	\[
 		\mathcal{T}^{r, s} V = \underbrace{V \otimes V \otimes \cdots \otimes V}_{r \text{ times}} \otimes \underbrace{V^* \otimes V^* \otimes \cdots \otimes V^*}_{s \text{ times}}
@@ -64,7 +64,7 @@ Then we define the tensor spaces.
 
 If a tensor of type $(r, 0)$, then it is called a \emph{contravariant tensor} or simply a \emph{tensor}\index{tensor}.
 If a tensor of type $(0, s)$, then it is called a \emph{covariant tensor} or simply a \emph{form}\index{form}.
-For $\mathcal{T}^{0, 0} V$, it is defined as $\F$ itself.
+For $\mathcal{T}^{0, 0} V$, it is defined as $\mathbb{k}$ itself.
 Any elements in $\mathcal{T}^{0, 0} V$ are \emph{scalar type} tensor on $V$, or simply \emph{scalars}\index{scalars}.
 
 Then we know that $\End(V) \equiv V \otimes V^* \equiv \mathcal{T}^{1, 1} V$.
@@ -74,7 +74,7 @@ To know that what $a^i_j$ means, we can consider the following diagram:
 \begin{center}
 	\begin{tikzcd}
 		V \arrow[r, "T"] \arrow[d, "{[-]_{\B_V}}" swap] & V \arrow[d, "{[-]_{\B_V}}"] \\
-		\F^n \arrow[r, "{A = [a^i_j]_{\B_V}}" swap] & \F^n
+		\mathbb{k}^n \arrow[r, "{A = [a^i_j]_{\B_V}}" swap] & \mathbb{k}^n
 	\end{tikzcd}
 \end{center}
 Then how to get the matrix representation $A = [a^i_j]_{\B_V}$ of $T$ with respect to the basis $\B_V$? We have:

@@ -185,7 +185,7 @@ With those five properties, we can construct monoid and groups.
 \end{example}
 
 \begin{definition}[Field]
-	A \emph{field}\index{field} is a commutative ring $\F$ such that every non-zero element has a multiplicative inverse.
+	A \emph{field}\index{field} is a commutative ring $\mathbb{k}$ such that every non-zero element has a multiplicative inverse.
 \end{definition}
 
 \begin{example}
@@ -338,15 +338,15 @@ The following two sets are the sets of all structure-preserving maps.
 Then we can define what a linear structure is.
 
 \begin{definition}[Linear Structure]
-	A \emph{linear structure} over a field $\F$ on a set $V$ is a pair $(+, \cdot)$ where $(V, +)$ is an abelian group with a ring homomorphism $\F \to \End(V)$, where $\End(V)$ is the endomorphism ring of the abelian group $(V, +)$.
+	A \emph{linear structure} over a field $\mathbb{k}$ on a set $V$ is a pair $(+, \cdot)$ where $(V, +)$ is an abelian group with a ring homomorphism $\mathbb{k} \to \End(V)$, where $\End(V)$ is the endomorphism ring of the abelian group $(V, +)$.
 	\begin{align*}
-		\cdot : \F &\to \End(V) \\
+		\cdot : \mathbb{k} &\to \End(V) \\
 		\alpha &\mapsto (\alpha\cdot : \vec{x} \mapsto \alpha \vec{x}) \qquad \alpha \cdot : V \to V
 	\end{align*}
-	The ring homomorphism is a (ring) action of the field $\F$ on the abelian group $(V, +)$, called \emph{scalar multiplication}.
+	The ring homomorphism is a (ring) action of the field $\mathbb{k}$ on the abelian group $(V, +)$, called \emph{scalar multiplication}.
 	The ring action can be written as a binary operation:
 	\begin{align*}
-		\cdot : \F \times V &\to V \\
+		\cdot : \mathbb{k} \times V &\to V \\
 		(\alpha, \vec{x}) &\mapsto \alpha \vec{x}
 	\end{align*}
 \end{definition}
@@ -355,7 +355,7 @@ A linear space / vector space is a set with a linear structure over a field on t
 In normal textbook, a linear space will be defined as follows:
 
 \begin{corollary}[Linear Spaces]
-	A linear space over a field $\F$ is a set $V$ equipped with two operations: vector addition $+: V \times V \to V$ and scalar multiplication $\cdot : \F \times V \to V$, satisfying the following axioms for all $\vec{u}, \vec{v}, \vec{w} \in V$ and $\alpha, \beta \in \F$:
+	A linear space over a field $\mathbb{k}$ is a set $V$ equipped with two operations: vector addition $+: V \times V \to V$ and scalar multiplication $\cdot : \mathbb{k} \times V \to V$, satisfying the following axioms for all $\vec{u}, \vec{v}, \vec{w} \in V$ and $\alpha, \beta \in \mathbb{k}$:
 	\begin{center}
 		\begin{tabularx}{\textwidth}{XX}
 			\toprule
@@ -368,7 +368,7 @@ In normal textbook, a linear space will be defined as follows:
 			5. Distributivity of scalar multiplication with respect to vector addition & $\alpha (\vec{u} + \vec{v}) = \alpha \vec{u} + \alpha \vec{v}$ \\
 			6. Distributivity of scalar multiplication with respect to field addition & $(\alpha + \beta) \cdot = \alpha \cdot + \beta \cdot$ \\
 			7. Compatibility of scalar multiplication with field multiplication & $(\alpha \beta) \cdot = (\alpha \cdot) \circ (\beta \cdot)$ \\
-			8. Identity element of scalar multiplication & $\F \ni 1 \mapsto (1\cdot : x \mapsto x) \in \End(V)$ \\
+			8. Identity element of scalar multiplication & $\mathbb{k} \ni 1 \mapsto (1\cdot : x \mapsto x) \in \End(V)$ \\
 			\bottomrule
 		\end{tabularx}
 	\end{center}
@@ -378,77 +378,77 @@ In normal textbook, a linear space will be defined as follows:
 \end{remark}
 
 \begin{example}
-	$\F$ is a linear space over itself with the usual addition and multiplication operations.
+	$\mathbb{k}$ is a linear space over itself with the usual addition and multiplication operations.
 	\begin{align*}
-		\cdot : \F \times \F &\to \F \\
+		\cdot : \mathbb{k} \times \mathbb{k} &\to \mathbb{k} \\
 		(\alpha,\beta) &\mapsto \alpha \beta
 	\end{align*}
-	The first $\F$ is the field acting on the second $\F$, which is the abelian group.
+	The first $\mathbb{k}$ is the field acting on the second $\mathbb{k}$, which is the abelian group.
 \end{example}
 
 \begin{example}
-	Let $X$ be a set and $\F$ be a field.
+	Let $X$ be a set and $\mathbb{k}$ be a field.
 	($f$ is a set map)
 	\begin{align*}
-		\F[[X]] = \Map(X, \F) &\overset{\mathrm{def}}{=\joinrel=} \text{the set of all $\F$-valued functions on } X \\
-		&=\joinrel= \left\{ f : X \to \F \right\}
+		\mathbb{k}[[X]] = \Map(X, \mathbb{k}) &\overset{\mathrm{def}}{=\joinrel=} \text{the set of all $\mathbb{k}$-valued functions on } X \\
+		&=\joinrel= \left\{ f : X \to \mathbb{k} \right\}
 	\end{align*}
-	$\F[[X]]$ is a linear space over $\F$ with the following operations defined pointwise:
+	$\mathbb{k}[[X]]$ is a linear space over $\mathbb{k}$ with the following operations defined pointwise:
 	\begin{align*}
-		+ : \F[[X]] \times \F[[X]] &\to \F[[X]] \\
-		(f,g) &\mapsto (f+g: x \mapsto f(x) + g(x)) \qquad f + g : X \to \F \\
-		\cdot : \F \times \F[[X]] &\to \F[[X]] \\
-		(\alpha,f) &\mapsto (\alpha f: x \mapsto \alpha f(x)) \qquad \alpha f : X \to \F
+		+ : \mathbb{k}[[X]] \times \mathbb{k}[[X]] &\to \mathbb{k}[[X]] \\
+		(f,g) &\mapsto (f+g: x \mapsto f(x) + g(x)) \qquad f + g : X \to \mathbb{k} \\
+		\cdot : \mathbb{k} \times \mathbb{k}[[X]] &\to \mathbb{k}[[X]] \\
+		(\alpha,f) &\mapsto (\alpha f: x \mapsto \alpha f(x)) \qquad \alpha f : X \to \mathbb{k}
 	\end{align*}
 \end{example}
 
 \begin{example}
-	Let $X$ be a set and $\F$ be a field.
+	Let $X$ be a set and $\mathbb{k}$ be a field.
 	\begin{align*}
-		\F[X] = \text{Map}_{\text{fin}}(X, \F) &\overset{\mathrm{def}}{=\joinrel=} \text{the set of all finitely supported $\F$-valued functions on } X \\
-		&=\joinrel= \left\{ f : X \to \F \mid f \text{ is finitely supported} \right\}
+		\mathbb{k}[X] = \text{Map}_{\text{fin}}(X, \mathbb{k}) &\overset{\mathrm{def}}{=\joinrel=} \text{the set of all finitely supported $\mathbb{k}$-valued functions on } X \\
+		&=\joinrel= \left\{ f : X \to \mathbb{k} \mid f \text{ is finitely supported} \right\}
 	\end{align*}
-	$\F[X]$ is a linear space over $\F$ as $\F[X] \subseteq \F[[X]]$ and the operations are defined pointwise as in the previous example.
+	$\mathbb{k}[X]$ is a linear space over $\mathbb{k}$ as $\mathbb{k}[X] \subseteq \mathbb{k}[[X]]$ and the operations are defined pointwise as in the previous example.
 
-	$f: X \to \F$ is finitely supported if the set $\{ x \in X \mid f(x) \neq 0 \}$ is finite or $f(x) \neq 0$ for only finitely many $x \in X$.
+	$f: X \to \mathbb{k}$ is finitely supported if the set $\{ x \in X \mid f(x) \neq 0 \}$ is finite or $f(x) \neq 0$ for only finitely many $x \in X$.
 \end{example}
 
 \begin{example}
 	Let $t$ be a formal variable.
-	Then $\F[[t]] \overset{\mathrm{def}}{=\joinrel=} \F[[\{ 1, t, t^2, \cdots \}]] = \sum_{n = 0}^\infty a_n t^n$ is the set of all formal power series in $t$ with coefficients in $\F$ and $\F[t] \overset{\mathrm{def}}{=\joinrel=} \F[\{ 1, t, t^2, \cdots \}] = \sum_{n = 0}^{N} a_n t^n$ is the set of all polynomials in $t$ with coefficients in $\F$.
-	Both $\F[[t]]$ and $\F[t]$ are linear spaces over $\F$.
+	Then $\mathbb{k}[[t]] \overset{\mathrm{def}}{=\joinrel=} \mathbb{k}[[\{ 1, t, t^2, \cdots \}]] = \sum_{n = 0}^\infty a_n t^n$ is the set of all formal power series in $t$ with coefficients in $\mathbb{k}$ and $\mathbb{k}[t] \overset{\mathrm{def}}{=\joinrel=} \mathbb{k}[\{ 1, t, t^2, \cdots \}] = \sum_{n = 0}^{N} a_n t^n$ is the set of all polynomials in $t$ with coefficients in $\mathbb{k}$.
+	Both $\mathbb{k}[[t]]$ and $\mathbb{k}[t]$ are linear spaces over $\mathbb{k}$.
 \end{example}
 
-There are another names for $\F[X]$ and $\F[[X]]$: Polynomial ring and Formal Power Series ring, respectively.
+There are another names for $\mathbb{k}[X]$ and $\mathbb{k}[[X]]$: Polynomial ring and Formal Power Series ring, respectively.
 
 \begin{example}
-	Let $n$ be a positive integer and $\F$ be a field.
+	Let $n$ be a positive integer and $\mathbb{k}$ be a field.
 	Then
 	\[
-		\F^n \overset{\mathrm{def}}{=\joinrel=} \left\{
+		\mathbb{k}^n \overset{\mathrm{def}}{=\joinrel=} \left\{
 		\begin{bmatrix}
 			c_1 \\
 			\vdots \\
 			c_n
 		\end{bmatrix}
-		\;\middle|\; c_i \in \F
+		\;\middle|\; c_i \in \mathbb{k}
 		\right\}
 	\]
-	is the set of all \emph{column matrices} with $n$ entries in $\F$.
-	Elements in $\F^n$ are written as $\vec{x}$ and are called \emph{column vectors}. $\F^n$ is a linear space over $\F$ with the following operations defined entrywise:
+	is the set of all \emph{column matrices} with $n$ entries in $\mathbb{k}$.
+	Elements in $\mathbb{k}^n$ are written as $\vec{x}$ and are called \emph{column vectors}. $\mathbb{k}^n$ is a linear space over $\mathbb{k}$ with the following operations defined entrywise:
 	\begin{align*}
-		+ : \F^n \times \F^n &\to \F^n \\
+		+ : \mathbb{k}^n \times \mathbb{k}^n &\to \mathbb{k}^n \\
 		(\vec{a}, \vec{b}) &\mapsto \vec{a} + \vec{b} = \begin{bmatrix}
 			a_1 + b_1 \\
 			\vdots \\
 			a_n + b_n
 		\end{bmatrix} \\
-		\cdot : \F \times \F^n &\to \F^n \\
+		\cdot : \mathbb{k} \times \mathbb{k}^n &\to \mathbb{k}^n \\
 		(\alpha, \vec{a}) &\mapsto \alpha \vec{a} = \begin{bmatrix}
 			\alpha a_1 \\
 			\vdots \\
 			\alpha a_n
 		\end{bmatrix}
 	\end{align*}
-	$\F^n$ is a linear space over $\F$ automatically as $\F$ is a linear space over itself.
+	$\mathbb{k}^n$ is a linear space over $\mathbb{k}$ automatically as $\mathbb{k}$ is a linear space over itself.
 \end{example}
